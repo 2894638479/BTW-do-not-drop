@@ -12,14 +12,12 @@
     "sources": "https://github.com/Legacy-Fabric/fabric-example-mod"
   },
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/do-not-drop/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
     ],
     "btw:addon": [
-      "btw.community.example.ExampleAddon"
     ]
   },
   "custom": {

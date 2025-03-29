@@ -1,0 +1,20 @@
+package net.fabricmc.example.mixin;
+
+import btw.inventory.container.SoulforgeContainer;
+import net.minecraft.src.EntityItem;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+@Mixin(SoulforgeContainer.class)
+public class SoulForgeContainerMixin {
+    @Redirect(at = @At(value = "INVOKE", target = "Lnet/minecraft/src/EntityPlayer;dropPlayerItem(Lnet/minecraft/src/ItemStack;)Lnet/minecraft/src/EntityItem;"),method = "onContainerClosed")
+    EntityItem DoNotDrop$redirectDrop(EntityPlayer instance, ItemStack par1ItemStack){
+        if(!instance.inventory.addItemStackToInventory(par1ItemStack)){
+            return instance.dropPlayerItem(par1ItemStack);
+        }
+        return null;
+    }
+}
