@@ -17,7 +17,7 @@
   "entrypoints": {
     "main": [
     ],
-    "btw:addon": [
+    "client": [
     ]
   },
   "custom": {
