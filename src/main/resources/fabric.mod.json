@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "do-not-drop",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Do Not Drop",
+  "description": "This Mod is used to fix some item drop when closing gui containers.",
   "authors": [
-    "Me!"
+    "craft_body"
   ],
   "contact": {
     "homepage": "https://legacyfabric.net/",
@@ -24,7 +24,7 @@
     "btw:addon_prefix": "EX"
   },
   "mixins": [
-    "modid.mixins.json"
+    "do-not-drop.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.19",
