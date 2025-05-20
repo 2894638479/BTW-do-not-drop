@@ -1,7 +1,7 @@
-package net.fabricmc.example.mixin;
+package net.btw.do_not_drop.mixin;
 
 import btw.client.gui.CraftingGuiWorkbench;
-import net.fabricmc.example.interfaces.AutoGetBack;
+import net.btw.do_not_drop.interfaces.AutoGetBack;
 import org.spongepowered.asm.mixin.Mixin;
 
 import java.util.List;

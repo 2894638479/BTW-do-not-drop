@@ -1,6 +1,6 @@
-package net.fabricmc.example.mixin;
+package net.btw.do_not_drop.mixin;
 
-import net.fabricmc.example.interfaces.AutoGetBack;
+import net.btw.do_not_drop.interfaces.AutoGetBack;
 import net.minecraft.src.GuiEnchantment;
 import org.spongepowered.asm.mixin.Mixin;
 

@@ -1,6 +1,6 @@
-package net.fabricmc.example.mixin;
+package net.btw.do_not_drop.mixin;
 
-import net.fabricmc.example.interfaces.AutoGetBack;
+import net.btw.do_not_drop.interfaces.AutoGetBack;
 import net.minecraft.src.Container;
 import net.minecraft.src.EntityClientPlayerMP;
 import net.minecraft.src.GuiContainer;
@@ -16,7 +16,7 @@ public abstract class GuiContainerMixin {
     @Shadow public Container inventorySlots;
 
     @Redirect(at = @At(value = "INVOKE", target = "Lnet/minecraft/src/EntityClientPlayerMP;closeScreen()V"),method = "keyTyped")
-    void DoNotDrop$isShiftDown(EntityClientPlayerMP instance){
+    void DoNotDrop$autoGetBack(EntityClientPlayerMP instance){
         if(this instanceof AutoGetBack) {
             ((AutoGetBack) this).DoNotDrop$GetBackIndexes().forEach((i)->{
                 Slot slot = (Slot) inventorySlots.inventorySlots.get(i);
